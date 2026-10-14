@@ -257,7 +257,7 @@ img { display: block; max-width: 100%; }
 .toolbelt-eyebrow { color: #3b3d30; margin-bottom: 1rem; }
 .toolbelt-lead { max-width: 32rem; margin: 0; font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.6; color: #272820; font-weight: 500; }
 
-.toolbelt-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+.toolbelt-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.35rem; margin-bottom: 2.5rem; }
 .tool-card { display: flex; flex-direction: column; padding: 1.7rem; background: var(--ink); color: var(--white); border-radius: 14px; box-shadow: 0 10px 30px rgba(25, 26, 22, 0.15); transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease; position: relative; overflow: hidden; }
 .tool-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(25, 26, 22, 0.28); }
 .tool-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
@@ -265,6 +265,8 @@ img { display: block; max-width: 100%; }
 .tool-icon--ps { background: #001e36; color: #31a8ff; border: 1.5px solid #31a8ff; }
 .tool-icon--ai { background: #330000; color: #ff9a00; border: 1.5px solid #ff9a00; }
 .tool-icon--cd { background: #002b11; color: #00d659; border: 1.5px solid #00d659; }
+.tool-icon--cc { background: #00222b; color: #00e5ff; border: 1.5px solid #00e5ff; }
+.tool-icon--ia { background: #200f38; color: #c084fc; border: 1.5px solid #c084fc; }
 .tool-icon--sb { background: #2f1300; color: #ff5722; border: 1.5px solid #ff5722; }
 .tool-icon--app { background: #261633; color: #d67eff; border: 1.5px solid #d67eff; }
 .tool-icon--cv { background: #002b36; color: #00c4cc; border: 1.5px solid #00c4cc; }
@@ -872,6 +874,10 @@ video.dialog-media-item {
 @keyframes pulse-ring {
   0% { transform: scale(0.7); opacity: 1; }
   100% { transform: scale(2.4); opacity: 0; }
+}
+
+@media (max-width: 1140px) {
+  .toolbelt-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 1050px) {
